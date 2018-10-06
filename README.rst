@@ -1,7 +1,8 @@
-neuralpy 1.3.0
+neuralpy 1.3.0 for Python 3
 --------------
 
 **Within this package is the most intuitive fully-connected multilayer neural network model. Data science shouldn't have a high barrier to entry. neuralpy handles the math and overhead while you focus on the data.**
+
 
 neuralpy is a neural network model written in python based on Michael Nielsen's neural networks and deep learning book.
 
@@ -25,7 +26,7 @@ The network feeds input vectors as python lists forward and returns the output v
 
 	x = [1, 1]
 	output = net.forward(x)
-	print output
+	print(output)
         # ex: [0.11471727263613461]
 
 Train the neural network by first generating training data in the form of a list of tuples. Each tuple has two components and each component is a list representing the input and output respectively. This training set represents the simple OR function
@@ -50,7 +51,7 @@ Then run the *train* method with the parameters. We're telling the network to co
 Now feed forward the input from earlier and the output should be closer to 1.0, which is what we trained the network to do::
 
 	output = net.forward(x)
-	print output		# ex: [0.9542129706170075]
+	print(output)		# ex: [0.9542129706170075]
 
 There is more information about advanced options such as monitoring the cost in the official documentation.
 

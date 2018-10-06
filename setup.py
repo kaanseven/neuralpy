@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
-print find_packages(exclude=['DEPneuralpy'])
+print(find_packages(exclude=['DEPneuralpy']))
 setup(
-	name='neuralpy',
+	name='neuralpy-upg',
 	version='1.3.0',
-        description='neuralpy - The most intuitive Neural Network Model',
+        description='neuralpy for Python 3 - The most intuitive Neural Network Model',
 	author='Jonathan N. Lee',
         keywords='neuralpy neural networks',
 	author_email='jonathan_lee@berkeley.edu',
@@ -17,8 +17,8 @@ setup(
 		'Topic :: Scientific/Engineering',
 		'Topic :: Scientific/Engineering :: Artificial Intelligence',
 		'Programming Language :: Python',
-		'Programming Language :: Python :: 2.7',
+		'Programming Language :: Python :: 3.7',
 		],
-	install_requires=['numpy==1.9.2', 'matplotlib==1.4.3'],
+	install_requires=['numpy==1.15.2', 'matplotlib==3.0.0'],
         packages=find_packages(exclude=['DEPneuralpy'])
 )
