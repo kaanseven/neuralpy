@@ -1,5 +1,6 @@
-from mlp import MLP
-from input_ import Input
+from neuralpy.layers.mlp import MLP
+from neuralpy.layers.input_ import Input
+import neuralpy.layers.layer as layer
 
 mapping = {
     layer.type_mlp: MLP,

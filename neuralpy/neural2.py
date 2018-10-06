@@ -14,16 +14,16 @@
 import random
 import json
 # internal libraries
-import layers
-import activations
-import colors
-import costs
+import neuralpy.layers as layers
+import neuralpy.activations as activations
+import neuralpy.colors as colors
+import neuralpy.costs as costs
 # third party libraries
 import numpy as np
 import matplotlib.pyplot as plt
 
 def output(s=""):
-    print colors.green + str(s) + colors.end
+    print(colors.green + str(s) + colors.end)
 
 # list2vec converts a list of any dimension to a numpy array
 # that is also a column vector (mx1 matrix where m equals the
@@ -214,11 +214,11 @@ class Network(NetworkBase):
         alpha = float(alpha)
         n = len(training_set)
         self._zero_deltas()
-        for j in xrange(epochs):
+        for j in range(epochs):
             random.shuffle(training_set)
             mini_batches = [
                 training_set[k:k + mini_batch_size] 
-                for k in xrange(0, n, mini_batch_size)
+                for k in range(0, n, mini_batch_size)
             ]
             for mini_batch in mini_batches:
                 self._update_batch(mini_batch, alpha)
@@ -227,7 +227,7 @@ class Network(NetworkBase):
                 self.costcurve.append(self._compute_cost(training_set))
 
     def show_cost(self):
-        x = xrange(0, len(self.costcurve), 1)
+        x = range(0, len(self.costcurve), 1)
         plt.plot(x, self.costcurve)
         plt.show()
 
@@ -284,7 +284,7 @@ class Network(NetworkBase):
 
     """# --TODO--
     def save(path):
-        it = iter(self.start)
+        it = iter(self.start())
         layers = []
         for layer in it:
             layers.append(layer)

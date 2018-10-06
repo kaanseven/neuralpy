@@ -10,7 +10,7 @@
 
 # system libraries
 # internal libraries
-import layer
+import neuralpy.layers.layer as layer
 # third party libraries
 import numpy as np
 

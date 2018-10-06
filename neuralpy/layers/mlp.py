@@ -12,7 +12,7 @@
 
 # system libraries
 # internal libraries
-import layer
+import neuralpy.layers.layer as layer
 # third party libraries
 import numpy as np
 
@@ -71,11 +71,11 @@ class MLP(layer.Layer):
 
 
     # randomize parameters for fully connected
-    # which is just random weights for each connectin
+    # which is just random weights for each connection
     # with preceding layer and full vector of random biases
     def randomize_parameters(self):
         if self.prev is not None:
-            self.w = self.rand(self.size, prev.size)
+            self.w = self.rand(self.size, self.prev.size) #
         self.b = self.rand(self.size, 1)
 
 

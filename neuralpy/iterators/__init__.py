@@ -1,2 +1,2 @@
-from layer_iterator import *
-from iterator import *
+from neuralpy.iterators.layer_iterator import *
+from neuralpy.iterators.iterator import *

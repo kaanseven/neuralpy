@@ -17,5 +17,5 @@ class Iterator(object):
         raise NotImplementedError
     def __iter__(self):
         raise NotImplementedError
-    def next(self):
+    def __next__(self):
         raise NotImplementedError

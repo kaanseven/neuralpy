@@ -2,7 +2,7 @@ import neuralpy
 
 net = neuralpy.Network([2, 10, 8, 1])
 
-print net.forward([1, 0])
+print(net.forward([1, 0]))
 
 datum_1 = ([1, 1], [0])
 datum_2 = ([1, 0], [1])
@@ -19,7 +19,7 @@ net.train(training_set, epochs, learning_rate, monitor=True)
 
 
 for x, y in training_set:
-    print net.forward(x)
+    print(net.forward(x))
     # ex: 	
     #	[0.06214085086576566]
     #	[0.946417057338419]

@@ -14,7 +14,7 @@
 
 # system libraries
 # internal libraries
-from iterator import Iterator
+from neuralpy.iterators.iterator import Iterator
 # third party libraries
 
 class LayerIterator(Iterator):
@@ -30,7 +30,7 @@ class LayerIterator(Iterator):
 
     # return the next forward propagation of the layer
     # unless the layer is none then stop iteration.
-    def next(self):
+    def __next__(self):
         if self.root is None:
             raise StopIteration
         else:
