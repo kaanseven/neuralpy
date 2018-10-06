@@ -15,7 +15,7 @@ Getting Started (quick start)
 The following demonstrates how to download and install **neuralpy** and how to create and train a simple neural network.
 Run the following command to download and install::
 
-	$ pip install neuralpy
+	$ pip install 'file.directory.that.contains.setup.py'
 
 Create a neural network in your project by specifying the number of nodes in each layer. Random weights and biases will automatically be generated::
 	
